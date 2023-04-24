@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>List of Jobs</title>
+  </head>
+  <style>
+    .btn {
+      padding: 5px 4px;
+      border: 2px solid grey;
+      background-color: rgb(119, 164, 154);
+      width: 100px;
+      height: 40px;
+      border-radius: 20px;
+    }
+    .btn:hover {
+      padding: 5px 4px;
+      border: 2px solid grey;
+      background-color: rgb(130, 171, 162);
+      width: 110px;
+      border-radius: 20px;
+    }
+    body {
+      background: url("https://images.unsplash.com/photo-1570304816841-906a17d7b067?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bmV3JTIweW9yayUyMHNreWxpbmV8ZW58MHx8MHx8&w=1000&q=80")
+        no-repeat center center/cover;
+    }
+    section p {
+      text-shadow: 2px 2px grey;
+      display: flex;
+      align-items: center;
+      color: rgb(41, 44, 42);
+      flex-direction: column;
+      justify-content: center;
+      margin: 20px 100px;
+      padding: 20px 10px;
+      font-size: 30px;
+
+      border: 2px solid white;
+      border-radius: 30px;
+      font-weight: bolder;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f5dc5c;
+    }
+    .sec h1 {
+      text-align: center;
+      padding: 40px;
+      color: rgb(234, 228, 228);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 60px;
+      background-color: black;
+      border-radius: 40px;
+      display: block;
+      margin: auto;
+    }
+  </style>
+  <body>
+    <section class="sec">
+      <h1 class="head">The following Jobs are available in your Area</h1>
+      <p id="demo"></p>
+      <p>
+        Title: Junior Software Manager<br />
+        Location:<br />
+        Company:Google<br />
+        Further Details: The Job is a full time job. The applicant should be
+        familiar with HTML and CSS. Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Perspiciatis harum, reprehenderit sapiente minima
+        fugiat excepturi totam iure id sequi quia ducimus quam! Modi vel debitis
+        voluptates, sunt consequuntur ea reiciendis.
+        <button class="btn">Apply</button>
+      </p>
+      <p>
+        Title: Data Scientist<br />
+        Location:<br />
+        Company:IBN<br />
+        Further Details: The Job is a full time job. The applicant should be
+        familiar with HTML and CSS. Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Perspiciatis harum, reprehenderit sapiente minima
+        fugiat excepturi totam iure id sequi quia ducimus quam! Modi vel debitis
+        voluptates, sunt consequuntur ea reiciendis.
+        <button class="btn">Apply</button>
+      </p>
+      <p>
+        Title: Computer Systems Analyst<br />
+        Location:<br />
+        Company: Apple<br />
+        Further Details: The Job is a full time job. The applicant should be
+        familiar with HTML and CSS. Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Perspiciatis harum, reprehenderit sapiente minima
+        fugiat excepturi totam iure id sequi quia ducimus quam! Modi vel debitis
+        voluptates, sunt consequuntur ea reiciendis.
+        <button class="btn" onclick="display()">Apply</button>
+      </p>
+      <br />
+    </section>
+    <script>
+        var countries;
+            function display(){
+            document.getElementById("demo").innerHTML = "Applied";
+            }
+    let json =  fetch('https://gist.githubusercontent.com/ebaranov/41bf38fdb1a2cb19a781/raw/fb097a60427717b262d5058633590749f366bd80/gistfile1.json')           //api for the get request
+  json.then((response) => response.json()).then((response ) =>{
+    console.log(response);
+    countries = response;
+  });
+
+       console.log(countries)     
+
+
+       let statename = localStorage.getItem("state");
+       function countrytostate(statename){
+        for(i=0;i<countries.length;i++){
+            let statenamelower = statename.toLowerCase();
+            const statetrue = countries[i].country.state.find(s=>s.name.toLowerCase().includes(statenamelower))
+            if(state){
+                return countries[i].country;
+            }
+
+
+        }
+        return null;
+    }
+  
+    </script>
+  </body>
+</html>
