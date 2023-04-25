@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+              background: url("https://media.istockphoto.com/id/1196485602/photo/portrait-of-a-cheerful-senior-businesswoman-using-smart-phone-at-home-office-close-up.jpg?s=612x612&w=0&k=20&c=YiRZtQxaW29D9kHMLTIE5dOPjWX5_PxLkCRbGQaYNYI=")
+              no-repeat center center/cover;
+        }
+        .left{
+        display:inline-block;
+        position:absolute;
+        left: 35px;
+        top:20px;
+        width: 10%;
+    }
+    .mid{
+        display:block;
+        border:2px rgb(107, 120, 154) solid;
+        margin:22px auto;
+        width:50%;
+        background-color: #dbc68e;
+        border-radius: 30px;
+    }
+    .right{
+        display:inline-block;
+        /* border:2px rgb(0, 255, 72) solid; */
+        position:absolute;
+        right: 35px;
+        top:36px;
+        
+    }
+    .right input{
+        size: 0cap;
+        border-radius: 30px;
+        width:200px ;
+        text-align: center;
+        font-size: 17px;
+        padding:5px;
+    }
+    .navbar li{
+        display: inline-block;
+        
+    }
+    .navbar a{
+        text-decoration: none;
+        color: rgb(98, 34, 121);
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        font-size: larger;
+        padding:35px;
+        cursor:grab;
+    }
+    .navbar a:hover{
+        text-decoration: none;
+        color: rgb(188, 106, 88);
+        font-family: serif;
+        font-size: larger;
+        padding:35px;
+        /* text-decoration: underline; */
+    }
+    .left img{
+        width: 230px;
+        border: rgb(57, 37, 37) solid 7px;
+        border-radius: 30px;
+    }
+    .phone{
+        color: blue;
+        text-underline-offset: 2px;
+    }
+     .em{
+            color: aliceblue;
+            padding: 10px 100px;
+            font-size: 25px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            /* align-items: center; */
+            justify-content:space-between ;
+            /* flex-wrap: wrap; */
+            text-shadow: 1px 1px grey;
+            background-color: #8d794328;
+            margin: 100px;
+            border-radius: 40px;        
+     }     
+     .mission img{
+        padding: 108px 50px;
+        width: 336px;
+        height: 400px;
+     } 
+     .mission h1{
+        color: rgb(57, 2, 111);
+     }
+    </style>
+</head>
+<body>
+    <div class="mid">
+        <ul class="navbar">
+            <li><a href="job.html">Home </a></li>
+                <li><a href="about.html">About Us  </a></li>
+                <li><a href="team.html">Our Team</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+     </div>
+     
+     <div class="left">
+        <img src="logo.png" alt="">            
+     </div>
+
+     <div class="right">
+        <input type="text" name="search" placeholder="Search for Jobs">
+     </div>
+
+    <div class="em">
+        <h1>Call us</h1>
+        <p>Questions about plans, pricing, or availability? Just have your people call our people.</p>
+        <p class="phone"><u>1800123999000</u></p>
+    </div>
+
+    <div class="em">
+        <h1>Write to Us</h1>
+        <p>Questions about plans, pricing, or availability? Just have your people mail our people.</p>
+        <p class="phone"><u>jayantjain@gmail.com</u></p>
+    </div>
+
+
+</body>
+</html>
